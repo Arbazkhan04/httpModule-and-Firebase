@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-http',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HttpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb:FormBuilder) { }
+  myForm=this.fb.group({
+    email:[' ',Validators.required],
+    password:[' ',Validators.required]
+  })
 
   ngOnInit(): void {
+    console.log(this.myForm.value);
+  }
+  onSubmit(){
+    
+    console.log(this.myForm.value)
   }
 
 }

@@ -6,15 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpComponent } from './http/http.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    HttpComponent
+    HttpComponent,
+  
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-   ReactiveFormsModule
+    ReactiveFormsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
